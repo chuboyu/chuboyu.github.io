@@ -1,6 +1,8 @@
 body {
   font-family: 'Nunito', sans-serif;
-  background-image: radial-gradient(100% 100% at 100% 100%, #ffffff,0.1%,#051005);
+  background-image: 
+    radial-gradient(50px 50px at 100% 100%, #ffffff, transparent),
+    radial-gradient(100% 100% at 100% 100%, #ffffff,5%,#051005);
   color: #eee;
 }
 
@@ -48,14 +50,15 @@ a:visited {
 }
 
 .experience {
+  width:100%;
   margin-top: 20px;
-  display: table;
+  display:flex;
 }
 
 .logo {
-  width: 50px;
   height: 50px;
   transform: translateY(5%);
+  flex:0 1 auto
 }
 
 .round {
@@ -64,13 +67,20 @@ a:visited {
 
 .description {
   border-left: 1px solid #ccc;
-  display: inline-block;
   margin-left: 20px;
   padding-left: 20px;
+  flex:0 1 auto;
 }
 
 .position,
 .institute {
   margin: 5px;
   font-size: 20px;
+}
+.time {
+  margin: 5px;
+  font-size: 12px;
+  flex: 1 1 auto;
+  text-align: right;
+  align-self: flex-end;
 }
