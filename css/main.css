@@ -6,7 +6,7 @@ color: #F7DA35;
 body {
 font-family: 'Nunito', sans-serif;
 background-image: 
-    radial-gradient(100% 50% at 100% 100%, #ffffff,5%,#061206);
+    radial-gradient(100% 50% at 100% 100%, #ffffff,1%,#061206);
 background-color:#061206;
 color: #eee;
 }
