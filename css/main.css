@@ -1,0 +1,127 @@
+body {
+    font-family: 'Nunito', sans-serif;
+    background-image: 
+        radial-gradient(100% 50% at 100% 100%, #ffffff,5% ,#051005);
+    background-color:#ffffff;
+    color: #eee;
+}
+
+hr {
+    width: 100%;
+    background-color: #ccc;
+    align-self: center;
+}
+
+a,
+a:hover,
+a:visited {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.name {
+    margin: 2vw auto 10vw 2vw;
+    font-size: 4vw;
+    color: #F7DA35;
+}
+
+.highlight {
+    font-weight: bold;
+    color: #fafafa;
+}
+
+.summary {
+    color: #bbb;
+    max-width: 80vw;
+    font-size: 3vw;
+    margin: 10vw auto 10vw auto;
+    text-align: center;
+}
+
+.summary a {
+    max-width: 80vw;
+    margin: 10vw auto 10vw auto;
+    text-align: center;
+    font-weight: normal;
+}
+
+.summary a:hover {
+    max-width: 80vw;
+    margin: 10vw auto 10vw auto;
+    text-align: center;
+    font-weight: normal;
+    color:#F7DA35
+}
+
+.contact {
+    max-width: 60vw;
+    font-size: 2vw;
+    margin: 10vw auto 10vw auto;
+    text-align: left;
+}
+
+.past {
+    max-width: 60vw;
+    margin: 10vw auto 10vw auto;
+    display: flex;
+    flex-flow: column;
+}
+
+.experience {
+    margin-top: 2vw;
+    display:flex;
+}
+
+.logo {
+    width: 5vw;
+    height: 5vw;
+    transform: translateY(5%);
+    flex:0 1 auto;
+    align-self: center;
+}
+
+.round {
+    border-radius: 50%;
+}
+
+.description {
+    border-left: 1px solid #ccc;
+    width:100%;
+    margin-left: 2vw;
+    padding-left: 2vw;
+    display: flex;
+    flex-flow: column;
+}
+
+.title{
+margin: 0.5vw;
+font-size: 2vw;
+color:#aaa;
+font-weight: bold;
+flex: 0 1 auto;
+}
+
+.institute {
+margin: 0.5vw;
+font-size: 1.6vw;
+font-weight: bold;
+color: #F7DA35;
+opacity: 0.75;
+text-align: left;
+}
+
+.position {
+display:flex;
+width: 100%;
+justify-content: space-between;
+}
+
+.time {
+font-size: 1.2vw;
+align-self: flex-start;
+text-align: right;
+opacity: 0.5;
+font-weight: bold;
+flex: 0 2 auto
+}
