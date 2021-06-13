@@ -13,11 +13,13 @@ hr {
 }
 
 a,
-a:hover,
 a:visited {
     text-decoration: none;
     color: #fff;
     font-weight: bold;
+}
+a:hover {
+    color: #F7DA35
 }
 
 .name {
@@ -38,20 +40,8 @@ a:visited {
     margin: 10vw auto 10vw auto;
     text-align: center;
 }
-
-.summary a {
-    max-width: 80vw;
-    margin: 10vw auto 10vw auto;
-    text-align: center;
+.summary a{
     font-weight: normal;
-}
-
-.summary a:hover {
-    max-width: 80vw;
-    margin: 10vw auto 10vw auto;
-    text-align: center;
-    font-weight: normal;
-    color:#F7DA35
 }
 
 .contact {
