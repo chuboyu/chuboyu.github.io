@@ -1,40 +1,48 @@
 body {
     font-family: 'Nunito', sans-serif;
+    /* BACKGROUND CHANGE */
     background-image: 
         radial-gradient(100% 50% at 100% 100%, #ffffff,5% ,transparent);
-    background-color:#051005;
-    color: #eee;
+    background-color:#c7edcc; 
+    /* GENERAL TEXT COLOR CHANGE */
+    color: #06330c;
 }
 
 hr {
     width: 100%;
-    background-color: #ccc;
+    background-color: #06330c; /* Changed from #ccc to general text color */
     align-self: center;
 }
 
 a,
 a:visited {
     text-decoration: none;
-    color: #fff;
+    /* Changed from #fff to general text color */
+    color: #06330c;
     font-weight: bold;
 }
 a:hover {
-    color: #F7DA35
+    /* Interaction Color */
+    color: #DF52FF
 }
 
 .name {
     margin: 2vw auto 10vw 2vw;
     font-size: 4vw;
-    color: #F7DA35;
+    /* Highlight/Title Color */
+    color: #06330c;
+    font-weight: bold;
 }
 
 .highlight {
     font-weight: bold;
-    color: #fafafa;
+    /* Highlight Text Color */
+    color: #06330c; 
 }
 
 .summary {
-    color: #bbb;
+    /* Changed from #bbb to general text color */
+    color: #06330c; 
     max-width: 80vw;
     font-size: 3vw;
     margin: 10vw auto 10vw auto;
@@ -75,7 +83,8 @@ a:hover {
 }
 
 .description {
-    border-left: 1px solid #ccc;
+    /* Border color changed */
+    border-left: 1px solid #06330c;
     width:100%;
     margin-left: 2vw;
     padding-left: 2vw;
@@ -87,7 +96,8 @@ a:hover {
     margin: 0.5vw;
     font-size: 1.6vw;
     font-weight: bold;
-    color: #F7DA35;
+    /* Secondary Highlight/Interaction Color */
+    color: #FFa600;
     opacity: 0.75;
     text-align: left;
 }
@@ -101,7 +111,8 @@ a:hover {
 .title{
     margin: 0.5vw;
     font-size: 2vw;
-    color:#aaa;
+    /* Changed from #aaa to general text color */
+    color:#06330c;
     font-weight: bold;
     flex: 0 1 auto;
     align-self: flex-end;
