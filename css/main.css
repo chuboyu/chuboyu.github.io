@@ -1,11 +1,12 @@
 body {
     font-family: 'Nunito', sans-serif;
-    /* BACKGROUND CHANGE */
+    /* BACKGROUND CHANGE 
     background-image: 
-        radial-gradient(100% 50% at 100% 100%, #ffffff,5% ,transparent);
+        radial-gradient(100% 50% at 100% 100%, #ffffff,5% ,transparent);*/
     background-color:#c7edcc; 
     /* GENERAL TEXT COLOR CHANGE */
     color: #06330c;
+    font-weight: 100;
 }
 
 hr {
@@ -18,7 +19,7 @@ a,
 a:visited {
     text-decoration: none;
     /* Changed from #fff to general text color */
-    color: #06330c;
+    color: inherit;
     font-weight: bold;
 }
 a:hover {
@@ -27,38 +28,61 @@ a:hover {
 }
 
 .name {
-    margin: 2vw auto 10vw 2vw;
+    margin: 2vw auto 5vw 2vw;
     font-size: 4vw;
     /* Highlight/Title Color */
     color: #06330c;
-    font-weight: bold;
+    font-weight:bold;
 }
 
 .highlight {
     font-weight: bold;
-    /* Highlight Text Color */
-    color: #06330c; 
 }
 
-.summary {
+.thesis {
     /* Changed from #bbb to general text color */
     color: #06330c; 
     max-width: 80vw;
     font-size: 3vw;
-    margin: 10vw auto 10vw auto;
-    text-align: center;
+    margin: 3vw auto 3vw auto;
 }
-.summary a{
+.thesis a{
     font-weight: normal;
 }
 
-.contact {
-    max-width: 60vw;
-    font-size: 2vw;
-    margin: 10vw auto 10vw auto;
-    text-align: right;
+.thesis .vision {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .valueprop {
+        display: flex;
+        gap: 3vw
+    }
+    .current {
+        color: #5f9867;
+        font-size: 2vw;
+        text-align:right;
+        justify-content: end;
+    }
 }
 
+.comments {
+    color: #5f9867;
+    font-size: 2vw;
+    margin-top: 2vw;
+}
+
+.contact {
+    max-width: 80vw;
+    font-size: 3vw;
+    margin: 0 auto 0 auto;
+    padding: 20px;
+    color: #5f9867;
+    font-size: 2vw;
+}
+.past h2 {
+    color: #5f9867   
+}
 .past {
     max-width: 60vw;
     margin: 10vw auto 10vw auto;
@@ -126,3 +150,127 @@ a:hover {
     flex: 0 2 auto;
     align-self: flex-end;
 }
+
+/* Style the clickable keyword */
+.pop-up-trigger {
+    cursor: help; /* Change cursor to indicate interaction */
+    /*border-bottom: 2px dashed #06330c;  Dotted line under the word */
+    padding-bottom: 2px;
+}
+.pop-up-trigger:hover {
+    color: var(--color-interaction, #DF52FF); /* Use the hover color for interaction */
+}
+
+/* Base style for the card container */
+.pop-up-card {
+    /* Style consistency */
+    background-color: #f7fff8; /* A slightly lighter background for the card */
+    border: 1px solid #06330c; 
+    border-radius: 5px;
+    padding: 1.5vw;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    
+    /* Positioning */
+    position: absolute; /* Essential for positioning relative to the trigger */
+    z-index: 100; /* Ensure it appears above other content */
+    max-width: 25vw;
+    min-width: 250px;
+    
+    /* Initial state: Hidden */
+    display: none;    
+    opacity: 0;
+    pointer-events: none; /* Allows clicks to pass through when hidden */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateY(10px); /* Small translation for a subtle pop-in effect */
+}
+
+/* Style for the card's text */
+.pop-up-title {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #06330c; /* Secondary Highlight/Accent Color */
+    margin-bottom: 0.5em;
+}
+
+.pop-up-content {
+    font-size: 1em;
+    line-height: 1.4;
+    color: #06330c;
+}
+
+.pop-up-content .social-logo {
+    width: 30px;
+    height: 30px;
+}
+
+/* State for when the card is active (shown by JavaScript) */
+.pop-up-card.active {
+    display: inline;
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+  font-weight: bold
+}
+.tooltip-container:hover {
+  color: #DF52FF
+}
+
+.tooltip-text {
+  visibility: hidden; /* Hidden by default */
+  opacity: 0; /* Start with opacity 0 */
+  /* Other styling for the tooltip text */
+  background-color: black;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%; /* Position above the container */
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 250px;
+  width: max-content;
+  white-space: normal;
+  font-weight: normal;
+}
+
+.tooltip-container:hover .tooltip-text {
+  visibility: visible; /* Make visible on hover */
+  opacity: 1; /* Fade in to full opacity */
+}
+
+/* index.css (New Additions) */
+
+#scroll-hint-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    
+    /* Style the banner to match the theme */
+    background-color: #5f9867; /* Muted medium green */
+    color: #ffffff;            /* White text for contrast */
+    opacity: 0.5;
+    text-align: center;
+    font-size: 1.2vw;
+    font-weight: bold;
+    z-index: 999; /* Ensure it stays above everything except the pop-up card */
+    
+    /* Transition for smooth hiding/showing */
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* Class to hide the banner (used by JavaScript) */
+#scroll-hint-banner.hidden {
+    transform: translateY(100%); /* Slide completely off the bottom */
+    opacity: 0;
+}
+
+/* Ensure body padding accounts for the banner on small screens if necessary.
+   Since the banner is fixed and short, this may not be strictly needed, 
+   but is good practice if its height were variable. */
