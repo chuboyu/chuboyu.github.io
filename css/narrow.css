@@ -1,47 +1,41 @@
 @media (max-width: 1000px){
     hr {
         width: 100%;
-        background-color: #ccc;
+        /* Changed from #ccc to general text color */
+        background-color: #06330c;
         align-self: center;
-    }
-
-    a,
-    a:visited {
-        text-decoration: none;
-        color: #fff;
-        font-weight: bold;
-    }
-    a:hover {
-        color: #F7DA35
     }
 
     .name {
         margin: 20px auto 100px 20px;
         font-size: 40px;
-        color: #F7DA35;
-    }
-
-    .highlight {
+        /* Highlight/Title Color */
+        color: #06330c;
         font-weight: bold;
-        color: #fafafa;
     }
 
-    .summary {
-        color: #bbb;
+    .thesis {
+        /* Changed from #bbb to general text color */
+        color: #06330c;
         max-width: 800px;
-        font-size: 30px;
-        margin: 100px auto 100px auto;
-        text-align: center;
+        font-size: 5vw;
     }
-    .summary a{
-        font-weight: normal;
+
+    .thesis .vision {
+        flex-direction: column;
+        .current {font-size: 3vw}
+    }
+
+    .comments {
+        font-size: 4vw;
+        margin-top: 10vw
     }
 
     .contact {
         max-width: 600px;
         font-size: 20px;
-        margin: 100px auto 100px 20px;
-        text-align: left;
+        margin: 50px auto 100px 20px;
+        text-align: right;
     }
 
     .past {
@@ -68,7 +62,8 @@
     }
 
     .description {
-        border-left: 1px solid #ccc;
+        /* Border color changed */
+        border-left: 1px solid #06330c;
         width:100%;
         margin-left: 20px;
         padding-left: 20px;
@@ -80,7 +75,8 @@
         margin: 5px;
         font-size: 16px;
         font-weight: bold;
-        color: #F7DA35;
+        /* Secondary Highlight/Interaction Color */
+        color: #FFa600;
         opacity: 0.75;
         text-align: left;
     }
@@ -94,7 +90,8 @@
     .title{
         margin: 5px;
         font-size: 20px;
-        color:#aaa;
+        /* Changed from #aaa to general text color */
+        color:#06330c;
         font-weight: bold;
         flex: 0 1 auto;
         align-self: flex-end;
@@ -107,5 +104,9 @@
         font-weight: bold;
         flex: 0 2 auto;
         align-self: flex-end;
+    }
+
+    #scroll-hint-banner {
+        font-size: 5vw;
     }
 }
