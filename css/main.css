@@ -18,7 +18,6 @@ hr {
 a,
 a:visited {
     text-decoration: none;
-    /* Changed from #fff to general text color */
     color: inherit;
     font-weight: bold;
 }
@@ -28,9 +27,8 @@ a:hover {
 }
 
 .name {
-    margin: 2vw auto 5vw 2vw;
-    font-size: 4vw;
-    /* Highlight/Title Color */
+    margin: min(2vw,20px) auto min(5vw,100px) min(2vw,20px);
+    font-size: max(4vw,40px);
     color: #06330c;
     font-weight:bold;
 }
@@ -40,14 +38,8 @@ a:hover {
 }
 
 .thesis {
-    /* Changed from #bbb to general text color */
-    color: #06330c; 
     max-width: 80vw;
-    font-size: 3vw;
-    margin: 3vw auto 3vw auto;
-}
-.thesis a{
-    font-weight: normal;
+    margin: 3vh auto 3vh auto;
 }
 
 .thesis .vision {
@@ -56,11 +48,12 @@ a:hover {
     justify-content: space-between;
     .valueprop {
         display: flex;
-        gap: 3vw
+        gap: 3vw;
+        font-size: max(3vw,20px);
     }
     .current {
         color: #5f9867;
-        font-size: 2vw;
+        font-size: max(2vw,14px);
         text-align:right;
         justify-content: end;
     }
@@ -68,36 +61,36 @@ a:hover {
 
 .comments {
     color: #5f9867;
-    font-size: 2vw;
-    margin-top: 2vw;
+    font-size: max(2vw,20px);
+    margin: 5vh 0 5vh 0;
 }
 
 .contact {
     max-width: 80vw;
     font-size: 3vw;
-    margin: 0 auto 0 auto;
-    padding: 20px;
+    margin: 3vh auto 0 auto;
     color: #5f9867;
-    font-size: 2vw;
+    font-size: max(2vw,20px);
+}
+
+.past {
+    max-width: max(60vw, 600px);
+    margin: 10vh auto 10vh auto;
+    display: flex;
+    flex-flow: column;
 }
 .past h2 {
     color: #5f9867   
 }
-.past {
-    max-width: 60vw;
-    margin: 10vw auto 10vw auto;
-    display: flex;
-    flex-flow: column;
-}
 
 .experience {
-    margin-top: 2vw;
+    margin-top: 2vh;
     display:flex;
 }
 
 .logo {
-    width: 5vw;
-    height: 5vw;
+    width: max(5vw,50px);
+    height: max(5vw,50px);
     flex:0 1 auto;
     align-self: center;
 }
@@ -110,15 +103,15 @@ a:hover {
     /* Border color changed */
     border-left: 1px solid #06330c;
     width:100%;
-    margin-left: 2vw;
-    padding-left: 2vw;
+    margin-left: max(2vw,20px);
+    padding-left: max(2vw,20px);
     display: flex;
     flex-flow: column;
 }
 
 .institute {
-    margin: 0.5vw;
-    font-size: 1.6vw;
+    margin: max(0.5vw,5px);
+    font-size: max(1.6vw, 16px);
     font-weight: bold;
     /* Secondary Highlight/Interaction Color */
     color: #FFa600;
@@ -133,8 +126,8 @@ a:hover {
 }
 
 .title{
-    margin: 0.5vw;
-    font-size: 2vw;
+    margin: max(0.5vw,5px);
+    font-size: max(2vw,20px);
     /* Changed from #aaa to general text color */
     color:#06330c;
     font-weight: bold;
@@ -142,8 +135,12 @@ a:hover {
     align-self: flex-end;
 }
 
+.title small {
+    color:#5f9867
+}
+
 .time {
-    font-size: 1vw;
+    font-size: max(1vw,10px);
     text-align: right;
     opacity: 0.5;
     font-weight: bold;
@@ -257,7 +254,7 @@ a:hover {
     color: #ffffff;            /* White text for contrast */
     opacity: 0.5;
     text-align: center;
-    font-size: 1.2vw;
+    font-size: 2vh;
     font-weight: bold;
     z-index: 999; /* Ensure it stays above everything except the pop-up card */
     
