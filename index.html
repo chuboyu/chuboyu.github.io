@@ -24,6 +24,9 @@
         <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
         <link href="https://fonts.googleapis.com/css?family=Nunito:100,300,500,700,900" rel="stylesheet">
         <link href="index.css?v=0.2" rel="stylesheet" type="text/css">
+
+        <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+        <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
     </head>
 
     <body itemscope itemtype="http://schema.org/Movie">
@@ -172,11 +175,10 @@
                 </div>
                 
             </div>
-<!--
             <div class="experience">
                 <img class="logo" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs%3D" alt="" />
                 <div class="description">
-                    <div class="position"> Lead Engineer </p>
+                    <div class="position"> Lead ML Engineer </p>
                     <p class="institute"> Arc Co., Ltd.</p>
                 </div>
                 <div class="time"> Jul&nbsp2012 - Sep&nbsp2013</div>
@@ -189,7 +191,6 @@
                 </div>
                 <div class="time"> Jul&nbsp2011 - Jun&nbsp2012</div>
             </div>
--->
             <div class="experience">
                 <img class="logo" src="images/NTU_logo.png" alt="NTU Logo">
                 <div class="description">
@@ -221,7 +222,7 @@
                     A good dedicated CTO is ideal but costly, and in gen-AI era, you need
                     <span class="tooltip-container">
                         something new
-                        <span class="tooltip-text">Boyu works closely with teams providing his open insights.</span>
+                        <span class="tooltip-text">Boyu works closely with teams providing his open insights. <span class="book-appointment-button" data-label="Book"></span> </span>
                     </span>
                     
                 </div>
@@ -271,27 +272,11 @@
             <div class="pop-up-card" id="social-media-card">
                 <p class="pop-up-title">Social Media Links</p>
                 <p class="pop-up-content">
+                    Add him via
                     <a href="https://www.linkedin.com/in/chuboyu/"><img class="social-logo" src="images/social_linkedin_logo.svg"/></a> 
                     <a href="https://www.facebook.com/chuboyu"><img class="social-logo" src="images/social_facebook_logo.svg"/></a>
-                    <br>
-                    <!-- Google Calendar Appointment Scheduling begin -->
-                    or just book a chat: <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
-                    <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
-                    <script>
-                        (function() {
-                            var target = document.currentScript;
-                            window.addEventListener('load', function() {
-                                calendar.schedulingButton.load({
-                                url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ1Hnt2H7elTyWTDyBO7ftlA4I1y1X0l7afOPftbqevAPmxroHa-qg1YX4zhFGpUrL-LFY9qYXI0?gv=true',
-                                color: '#039BE5',
-                                label: 'Book an appointment',
-                                target,
-                                });
-                            });
-                        })();
-                    </script>
-                    <!-- end Google Calendar Appointment Scheduling -->
                 </p>
+                <p>or just <span class="book-appointment-button" data-label="Book"></span> an appointment.</p>
             </div>
         </div>
 
@@ -300,6 +285,7 @@
         </div>
 
         <script src="popup.js"></script> 
+        <script src="calendar.js"></script> 
 
     </body>
 </html>

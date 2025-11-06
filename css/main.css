@@ -210,37 +210,49 @@ a:hover {
 
 .tooltip-container {
   position: relative;
-  display: inline-block;
-  font-weight: bold
+  /* Make sure the container is an inline-block to apply padding correctly */
+  display: inline-block; 
+  font-weight: bold;
+  /* KEY FIX 1: Create a padding 'bridge' below the text */
+  padding-bottom: 8px; 
 }
 .tooltip-container:hover {
   color: #DF52FF
 }
 
 .tooltip-text {
-  visibility: hidden; /* Hidden by default */
-  opacity: 0; /* Start with opacity 0 */
-  /* Other styling for the tooltip text */
-  background-color: black;
+  visibility: hidden; 
+  opacity: 0; 
+  background-color: rgba(0, 0, 0, 0.95); 
   color: white;
-  padding: 5px;
+  padding: 10px;
   border-radius: 5px;
+  
   position: absolute;
-  z-index: 1;
-  bottom: 125%; /* Position above the container */
+  z-index: 10; 
+  
+  /* KEY FIX 2: Position the tooltip to start exactly where the text ends */
+  bottom: 100%; 
   left: 50%;
-  transform: translateX(-50%);
+  
+  /* KEY FIX 3: Push the tooltip down 8px to meet the padding-bottom area */
+  transform: translateX(-50%) translateY(8px); 
+  
   max-width: 250px;
   width: max-content;
   white-space: normal;
   font-weight: normal;
+  
+  pointer-events: none; 
+  transition: opacity 0.3s ease;
 }
 
+/* Visibility trigger remains the same */
 .tooltip-container:hover .tooltip-text {
-  visibility: visible; /* Make visible on hover */
-  opacity: 1; /* Fade in to full opacity */
+  visibility: visible; 
+  opacity: 1; 
+  pointer-events: auto; 
 }
-
 /* index.css (New Additions) */
 
 #scroll-hint-banner {
