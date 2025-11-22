@@ -20,19 +20,29 @@
                     label: button.getAttribute('data-label') || 'Book an appointment', // Allows overriding the label
                     target: button,
                 });
+                const theButton = button.nextElementSibling;
+                if (theButton) {
+                    theButton.style.padding = '0.2em 0.5em'
+                    theButton.style.minHeight = '0px'
+                }
             }
         });
         const visionButtons = document.querySelectorAll('.vision-talk-button');
         visionButtons.forEach(button => {
               if (window.calendar && window.calendar.schedulingButton) {
                   // Apply the scheduling button to each target element
-                  calendar.schedulingButton.load({
-                      // *** YOUR UNIQUE URL AND SETTINGS HERE ***
-                      url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ3nirHONfHOvuOy1M0z1z5hi7QLwGvcMGeODgtDULztNFR2Xkmm3NELS1G-7DaXgjz8FXIpLXxs?gv=true',
-                      color: '#0B8043',
-                      label: button.getAttribute('data-label') || 'Book an appointment', // Allows overriding the label
-                      target: button,
-                  });
+                calendar.schedulingButton.load({
+                    // *** YOUR UNIQUE URL AND SETTINGS HERE ***
+                    url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ3nirHONfHOvuOy1M0z1z5hi7QLwGvcMGeODgtDULztNFR2Xkmm3NELS1G-7DaXgjz8FXIpLXxs?gv=true',
+                    color: '#0B8043',
+                    label: button.getAttribute('data-label') || 'Book an appointment', // Allows overriding the label
+                    target: button,
+                });
+                const theButton = button.nextElementSibling;
+                if (theButton) {
+                    theButton.style.padding = '0.2em 0.5em'
+                    theButton.style.minHeight = '0px'
+                }
               }
         });
     });

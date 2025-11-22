@@ -143,6 +143,7 @@ a.call-to-action {
 }
 
 .title small {
+    font-size:0.5em;
     color:#5f9867
 }
 
@@ -220,8 +221,6 @@ a.call-to-action {
   /* Make sure the container is an inline-block to apply padding correctly */
   display: inline-block; 
   font-weight: bold;
-  /* KEY FIX 1: Create a padding 'bridge' below the text */
-  padding-bottom: 8px; 
 }
 .tooltip-container:hover {
   color: #DF52FF
