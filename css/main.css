@@ -26,6 +26,13 @@ a:hover {
     color: #DF52FF
 }
 
+a.call-to-action {
+  border-radius: 10px;
+  background-color: #0B8043;
+  padding-inline: 5px;
+  color: white
+}
+
 .name {
     margin: min(2vw,20px) auto min(5vw,100px) min(2vw,20px);
     font-size: max(4vw,40px);
